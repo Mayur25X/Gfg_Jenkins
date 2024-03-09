@@ -7,18 +7,25 @@ pipeline {
 
         stages {
             stage('Welcome Stage') {
-            echo 'welcome'
+                steps {
+                echo 'welcome'
+                }
             }
             stage('Clean Stage')
             {
+                steps {
                 sh 'mvn clean'
+                }
             }
             stage('Test Stage') {
+                steps {
                 sh 'mvn test'
+                }
             }
             stage('Build Stage') {
+                steps {
                 sh 'mvn build'
+                }
             }
         }
 }
-
