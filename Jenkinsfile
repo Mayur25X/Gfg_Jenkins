@@ -11,13 +11,13 @@ pipeline {
             }
             stage('Clean Stage')
             {
-                'sh mvn clean'
+                sh 'mvn clean'
             }
             stage('Test Stage') {
-                'sh mvn test'
+                sh 'mvn test'
             }
             stage('Build Stage') {
-                'sh mvn build'
+                sh 'mvn build'
             }
         }
 }
